@@ -1,0 +1,39 @@
+{
+  "checksums": {
+    "spec/classes/vmwaretools_spec.rb": "6136dfe4f8f82d1f0b1d153da7d74597",
+    "Modulefile": "84524cc5d849c4858439bee04eca9570",
+    "DEVELOP.md": "5e1631e8c6b5035d22b06344530c0c69",
+    "manifests/init.pp": "fbcd87879e460578db8d0933f7a6a4dd",
+    "README.md": "6a027221924fded3dd90880b2db5bd92",
+    "LICENSE": "4f960dc2fd2d219b183be6460aa70af3",
+    "tests/init.pp": "70cebc7cdbbb3ae4179c07b5939435af",
+    "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+    "tests/init_topscope.pp": "0fc5e9c3825a93cafaff215bedd64e25",
+    "Rakefile": "bc80fe9d6aaaca0bbc13a8977c687cda",
+    "tests/ntp_topscope.pp": "1e3af82a8d74e87022974a1d4f7db25e",
+    "tests/ntp.pp": "e6eeb1d254944407ad354842e97f7c01",
+    "tests/ntp_class.pp": "9e593eb003ad841d09742ed1dd41a69d",
+    "spec/classes/vmwaretools_ntp_spec.rb": "e2af2f41385425c283e34cf23bd2a62a",
+    "tests/init_class.pp": "b534e8b00253ee1755dc098879e3a862",
+    "manifests/ntp.pp": "cb574879972c0a9f8eb4a0843fd4be19",
+    "manifests/params.pp": "f781f8026b236e87584e034f0622de32",
+    "TODO": "a73f97affa5f40b941c6f91863e1311c"
+  },
+  "license": "Apache 2.0",
+  "version": "4.4.1",
+  "project_page": "https://github.com/razorsedge/puppet-vmwaretools",
+  "source": "git://github.com/razorsedge/puppet-vmwaretools.git",
+  "description": "This module manages the installation of the VMware Tools Operating System Specific Packages.",
+  "dependencies": [
+    {
+      "version_requirement": ">=2.3.0",
+      "name": "puppetlabs/stdlib"
+    }
+  ],
+  "summary": "VMware Tools OSP installation.",
+  "types": [
+
+  ],
+  "author": "razorsedge",
+  "name": "razorsedge-vmwaretools"
+}
