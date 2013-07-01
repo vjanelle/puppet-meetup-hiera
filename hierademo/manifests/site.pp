@@ -1,19 +1,13 @@
-class ntp (
-  $ntpservers
-  # $ntpservers = $ntpservers # Node scope lookup
-) {
-  notify { "${ntpservers} on ${::fqdn}": }
+node 'default' {
 }
 
-node default {
-  $ntpservers = '127.0.0.1'
-  include ntp
-}
+# node 'app' {
+#  # include openssh
+#}
 
-node 'puppet.localdomain' inherits default {
-  $ntpservers = '127.0.0.2'
-
-  notify {  "But I want \$ntpservers to be ${ntpservers}":
-    require => Class['ntp']
-  } 
-}
+#node 'app' {
+#  class { 'openssh::enc':
+#    port        => 22,
+#    allow_users => ['root']
+#  }
+#}

@@ -22,6 +22,16 @@ Vagrant.configure("2") do |config|
     # puppet.vm.synced_folder "puppet", "/etc/puppet"
   end
 
+  config.vm.define :app do |app|
+    app.vm.box = "centos64_64"
+    app.vm.network :private_network, ip: "172.16.219.20"
+    app.vm.hostname = "app.localdomain"
+    app.vm.provision :hosts
+    app.vm.provision :puppet_server do |puppet|
+        puppet.puppet_server = 'puppet'
+    end
+  end
+
   # config.vm.provision :shell, :path => "bootstrap.sh"
   # config.vm.network :forwarded_port, host: 4567, guest: 80
   # The url from where the 'config.vm.box' box will be fetched if it
