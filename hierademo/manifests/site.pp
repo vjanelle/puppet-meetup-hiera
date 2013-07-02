@@ -1,3 +1,5 @@
+import 'infrastructure.pp'
+
 node 'default' {
 }
 
