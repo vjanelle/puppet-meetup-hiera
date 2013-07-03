@@ -34,12 +34,15 @@ document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.se
 
 <div class="reveal">
     <div class="slides">
-        <section data-markdown>
-            <script type="text/template">
-            # Test
-
-            A thing
-            </script>
+        <section data-markdown="md/title.md"></section>
+        <section data-markdown="md/hello.md"></section>
+        <section data-markdown="md/special_thanks.md"></section>
+        <section data-markdown="md/puppet_data.md"></section>
+        <section data-markdown="md/what_is_hiera.md"></section>
+        <section data-markdown="md/why_hiera.md"></section>
+        <section>
+            <section data-markdown="md/anti_patterns.md"></section>
+            <section data-markdown="md/anti_patterns-modules_with_no_parameters.md" data-separator="^\n\n\n" data-vertical="^\n\n"></section>
         </section>
     </div>
 </div>
