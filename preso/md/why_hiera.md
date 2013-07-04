@@ -1,4 +1,4 @@
-# Why Hiera?
+## Why Hiera?
 
 * Data seperation
   * Keep node/environment/site-specific data out of manifests

@@ -1,4 +1,4 @@
-# What is Hiera?
+## What is Hiera?
 
 * Key/Value lookup for configuration data
   * "ntp::ntpservers"

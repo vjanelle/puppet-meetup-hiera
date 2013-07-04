@@ -4,6 +4,7 @@
 :yaml:
   :datadir: /etc/puppet/hieradata
 :hierarchy:
+  - %{hostgroups}
   - %{::clientcert} # Fact 
   - %{custom_location} # Node-level variable, $custom_location
   - common # Generic shared resources

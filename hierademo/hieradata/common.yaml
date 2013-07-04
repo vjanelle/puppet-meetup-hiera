@@ -1,1 +1,2 @@
 ntp::ntpservers: '10.0.0.1'
+test: "foo"

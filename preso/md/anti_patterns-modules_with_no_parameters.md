@@ -77,6 +77,8 @@ node 'dev' {
 <aside class="notes">
 <p/ >
 Some sites have used puppet itself to store data.  This mostly works out, but tends to lead to situations where you're making changes about data, or duplicating environments..
+<p />
+Another issue with doing this - can anyone spot the error?
 </aside>
 
 
@@ -132,11 +134,39 @@ Notice: Scope(Node[default]): $ntpservers is 127.0.0.2
   - %{custom_location} # Node-level variable, $custom_location
   - common # Generic shared resources
 ```
-<aside class=notes>
+<aside class="notes">
 Sample hiera configuration file - yours will most likely be more complicated.
 <ul>
-<li>fqdn - a facter fact.  Provided by puppet when calling hiera
-<li>environment - master-set variable, with puppet 3 the agent may request it, but an ENC can override it.
-<li>$custom_location - A user defined variable contained in the local scope when puppet requests data from hiera.  There's suggested practices for this, usually only acceptable if set in the node scope.
+<li>fqdn - a facter fact.  Provided by puppet when calling hiera</li>
+<li>environment - master-set variable, with puppet 3 the agent may request it, but an ENC can override it.</li>
+<li>$custom_location - A user defined variable contained in the local scope when puppet requests data from hiera.  There's suggested practices for this, usually only acceptable if set in the node scope.</li>
 </ul>
+</aside>
+
+
+
+## Testing on the command line
+
+```shell
+[vagrant@ etc]$ hiera ntp::ntpservers
+10.0.0.1
+[vagrant@ etc]$ hiera ntp::ntpservers ::clientcert=puppet.localdomain
+192.168.0.1
+```
+
+```yaml
+common.yaml
+ntp::ntpservers: '10.0.0.1'
+```
+
+* puppet.localdomain.yaml
+
+```yaml
+ntp::ntpservers: '192.168.0.1'
+```
+<aside class="notes">
+You can also use hiera on the command line to lookup variables - useful for debugging.  
+<p />The basic command line options are the key you want to look up, and any variables you wish to pass to hiera.
+<p />
+There are other options of course in puppet - merging lookups, priorities, even overriding the hierachy. 
 </aside>

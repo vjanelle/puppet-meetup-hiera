@@ -1,4 +1,4 @@
-# Vincent Janelle
+## Vincent Janelle
 
 * Development Operations Lead at Storefront.com
 * Bright ray of sunshine  

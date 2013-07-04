@@ -1,6 +1,8 @@
-# Special Thanks
+## Special Thanks
 
-* Puppet Labs
+* Chris Turra & Mozilla
+  * Providing space
+* Puppet Labs & Eric Sorenson
   * Puppet, Hiera, and awesome community support  
 * Kelsey Hightower
   * Puppetconf 2012 talk on Hiera and hiera data bindings  
